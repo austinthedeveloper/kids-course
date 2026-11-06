@@ -31,9 +31,6 @@ Epic: [#1](https://github.com/austinthedeveloper/kids-course/issues/1)
 | SP-001 | [#17](https://github.com/austinthedeveloper/kids-course/issues/17) | P0 | M | Spike: canvas library prototype — drag, zoom and rotate on touch | US-001, EN-003, EN-005 |
 | EN-007 | [#18](https://github.com/austinthedeveloper/kids-course/issues/18) | P0 | S | Decide persistence adapter and schema-validation approach; settle ADR-0001 and ADR-0003 | US-001 |
 | Q-05 | [#19](https://github.com/austinthedeveloper/kids-course/issues/19) | P0 | XS | Must the MVP work fully offline after first load? | — |
-| Q-11 | [#89](https://github.com/austinthedeveloper/kids-course/issues/89) | P0 | XS | Confirm Azure hosting details: service, subscription, pipeline tool and domain | — |
-| EN-033 | [#90](https://github.com/austinthedeveloper/kids-course/issues/90) | P0 | M | Provision Azure static hosting as infrastructure-as-code | US-001, Q-11 |
-| EN-034 | [#91](https://github.com/austinthedeveloper/kids-course/issues/91) | P0 | M | Continuous deployment of main to Azure | EN-001, EN-033 |
 | EN-036 | [#93](https://github.com/austinthedeveloper/kids-course/issues/93) | P0 | S | Unit test conventions and coverage reporting for core modules | EN-001 |
 
 ## M1 — Equipment inventory + approved activity catalog
@@ -56,7 +53,6 @@ Epic: [#2](https://github.com/austinthedeveloper/kids-course/issues/2)
 | US-003 | [#31](https://github.com/austinthedeveloper/kids-course/issues/31) | P0 | S | See activity restrictions for my gear | US-002, EN-010 |
 | US-022 | [#32](https://github.com/austinthedeveloper/kids-course/issues/32) | P0 | S | Get started from an empty inventory with a sample gear set | US-002 |
 | EN-012 | [#33](https://github.com/austinthedeveloper/kids-course/issues/33) | P0 | S | Automated guard against "safe" / "certified" claims in copy and templates | EN-001 |
-| EN-035 | [#92](https://github.com/austinthedeveloper/kids-course/issues/92) | P0 | S | Preview deployment for every pull request | EN-034 |
 | EN-037 | [#94](https://github.com/austinthedeveloper/kids-course/issues/94) | P0 | M | Playwright foundation: device projects, data seeding, traces and accessibility checks | EN-001, EN-011 |
 | EN-038 | [#95](https://github.com/austinthedeveloper/kids-course/issues/95) | P0 | S | End-to-end tests: equipment inventory flows | EN-037, US-002, US-022 |
 
@@ -134,6 +130,10 @@ Epic: [#6](https://github.com/austinthedeveloper/kids-course/issues/6)
 | EN-030 | [#76](https://github.com/austinthedeveloper/kids-course/issues/76) | P0 | M | Accessibility audit and verification of all claims and warnings | — |
 | EN-031 | [#77](https://github.com/austinthedeveloper/kids-course/issues/77) | P0 | S | Release readiness: known limitations, changelog, privacy notes and release checklist | — |
 | EN-032 | [#78](https://github.com/austinthedeveloper/kids-course/issues/78) | P0 | M | Offline use after first load (only if Q-05 says yes) | Q-05 |
+| Q-11 | [#89](https://github.com/austinthedeveloper/kids-course/issues/89) | P0 | XS | Confirm Azure hosting details: service, subscription, pipeline tool and domain | — |
+| EN-033 | [#90](https://github.com/austinthedeveloper/kids-course/issues/90) | P0 | M | Provision Azure static hosting as infrastructure-as-code | US-001, Q-11 |
+| EN-034 | [#91](https://github.com/austinthedeveloper/kids-course/issues/91) | P0 | M | Continuous deployment of main to Azure | EN-001, EN-033 |
+| EN-035 | [#92](https://github.com/austinthedeveloper/kids-course/issues/92) | P0 | S | Preview deployment for every pull request | EN-034 |
 | EN-041 | [#98](https://github.com/austinthedeveloper/kids-course/issues/98) | P0 | M | Release pipeline: gated production deployments, versioning and rollback | EN-034, EN-029 |
 | EN-042 | [#99](https://github.com/austinthedeveloper/kids-course/issues/99) | P0 | S | Hosting hardening: security headers, caching, routing and domain | EN-034 |
 
@@ -207,7 +207,7 @@ Decisions the owner needs to make. Each one names what it blocks; blocked work m
 | Q-07 | [#42](https://github.com/austinthedeveloper/kids-course/issues/42) | M3 | Is course flow one-direction only at launch, or are loops allowed? | EN-019 |
 | Q-06 | [#57](https://github.com/austinthedeveloper/kids-course/issues/57) | M4 | Is print required for the first alpha, and does MVP need a black-and-white mode? | US-015 |
 | Q-08 | [#58](https://github.com/austinthedeveloper/kids-course/issues/58) | M4 | Are setup instructions primarily read on a phone or on a larger screen? | US-029 |
-| Q-11 | [#89](https://github.com/austinthedeveloper/kids-course/issues/89) | M0 | Confirm Azure hosting details: service, subscription, pipeline tool and domain | EN-033 |
+| Q-11 | [#89](https://github.com/austinthedeveloper/kids-course/issues/89) | M5 | Confirm Azure hosting details: service, subscription, pipeline tool and domain | EN-033 |
 
 ## First sprint candidate
 
@@ -217,7 +217,6 @@ Decisions the owner needs to make. Each one names what it blocks; blocked work m
 4. Small proof of concept: display/edit polygon corner in Konva; convert screen ↔ world coordinates: SP-001 ([#17](https://github.com/austinthedeveloper/kids-course/issues/17)).
 5. Decide persistence strategy and document ADR: EN-007 ([#18](https://github.com/austinthedeveloper/kids-course/issues/18)).
 6. Agree unit test conventions and coverage reporting: EN-036 ([#93](https://github.com/austinthedeveloper/kids-course/issues/93)).
-7. Provision Azure hosting and deploy `main` automatically: EN-033 ([#90](https://github.com/austinthedeveloper/kids-course/issues/90)), EN-034 ([#91](https://github.com/austinthedeveloper/kids-course/issues/91)), once Q-11 ([#89](https://github.com/austinthedeveloper/kids-course/issues/89)) is answered.
 
 Answering Q-01 to Q-04 and Q-09 during this sprint unblocks M1.
 
