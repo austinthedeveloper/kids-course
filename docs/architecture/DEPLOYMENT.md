@@ -1,6 +1,6 @@
 # Hosting, pipelines and deployment
 
-> **Status:** planned, nothing is provisioned yet. Decision: [ADR-0004](../decisions/ADR-0004-AZURE-STATIC-HOSTING.md). Details marked *proposed* are confirmed in Q-11 ([#89](https://github.com/austinthedeveloper/kids-course/issues/89)). Replace placeholders in this file with real names, URLs and commands as each backlog item lands.
+> **Status:** planned for M5, nothing is provisioned yet. Development stays local until then. Decision: [ADR-0004](../decisions/ADR-0004-AZURE-STATIC-HOSTING.md). Details marked *proposed* are confirmed in Q-11 ([#89](https://github.com/austinthedeveloper/kids-course/issues/89)). Replace placeholders in this file with real names, URLs and commands as each backlog item lands.
 
 ## Principles
 

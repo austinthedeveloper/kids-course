@@ -1,0 +1,42 @@
+{
+  "hash": "2b4afbfc",
+  "configHash": "37c13cff",
+  "lockfileHash": "8e02483d",
+  "browserHash": "a9af49c6",
+  "optimized": {
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "94fe9938",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "96f24d19",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "03fe19b3",
+      "needsInterop": false
+    },
+    "konva": {
+      "src": "../../../../../../node_modules/konva/lib/index.js",
+      "file": "konva.js",
+      "fileHash": "58af891c",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "core-RGofNjFx": {
+      "file": "core-RGofNjFx.js",
+      "isDynamicEntry": false
+    },
+    "platform-browser-td6swIz6": {
+      "file": "platform-browser-td6swIz6.js",
+      "isDynamicEntry": false
+    }
+  }
+}

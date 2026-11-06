@@ -1,0 +1,1 @@
+import{D as ny,p as Nm,r as $s,v as Us}from"./main-NJ5HTCAP.js";var i=class o{static ɵfac=function(e){return new(e||o)};static ɵcmp=Nm({type:o,selectors:[[`kc-courses`]],decls:4,vars:0,template:function(e,c){e&1&&($s(0,`h1`),ny(1,`Courses`),Us(),$s(2,`p`),ny(3,`Generating and saving courses is not built yet.`),Us())},encapsulation:2})};export{i as Courses};

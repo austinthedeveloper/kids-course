@@ -1,0 +1,1 @@
+import{D as ny,p as Nm,r as $s,v as Us}from"./main-NJ5HTCAP.js";var o=class a{static ɵfac=function(e){return new(e||a)};static ɵcmp=Nm({type:a,selectors:[[`kc-equipment`]],decls:4,vars:0,template:function(e,s){e&1&&($s(0,`h1`),ny(1,`Equipment`),Us(),$s(2,`p`),ny(3,`Listing the gear you own is not built yet.`),Us())},encapsulation:2})};export{o as Equipment};

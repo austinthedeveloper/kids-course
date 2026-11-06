@@ -17,10 +17,8 @@ Tracking: epic [#1](https://github.com/austinthedeveloper/kids-course/issues/1) 
 - [ ] Add example fixtures: rectangular and L-shaped rooms, common gear.
 - [ ] Decide canvas library after a quick drag/zoom/rotate prototype; record ADR update.
 - [ ] Agree unit test conventions and report coverage for core modules.
-- [ ] Provision Azure static hosting as code (ADR-0004).
-- [ ] Deploy `main` to Azure automatically after CI passes.
 
-**Demo:** starts locally, CI green, sample room visible at the deployed Azure URL. **Exit:** clean setup, automated smoke test and domain type tests pass.
+**Demo:** starts locally, CI green, sample room visible. **Exit:** clean setup, automated smoke test and domain type tests pass.
 
 ## M1 — Equipment inventory + approved activity catalog
 
@@ -36,7 +34,6 @@ Tracking: epic [#2](https://github.com/austinthedeveloper/kids-course/issues/2) 
 - [ ] Persist inventory locally; test save/load and invalid data.
 - [ ] Add clear empty/error states.
 - [ ] Set up the Playwright harness (phone and tablet/desktop) and cover the inventory flows end to end.
-- [ ] Publish a preview deployment for every pull request.
 
 **Demo:** configure a realistic household inventory and reload unchanged. **Exit:** no unspecified dimension silently becomes zero; only approved activities can be selected.
 
@@ -98,6 +95,11 @@ Tracking: epic [#5](https://github.com/austinthedeveloper/kids-course/issues/5) 
 
 Tracking: epic [#6](https://github.com/austinthedeveloper/kids-course/issues/6) · [GitHub milestone](https://github.com/austinthedeveloper/kids-course/milestone/6)
 
+The app is developed and tested locally until here; hosting arrives in this milestone (ADR-0004).
+
+- [ ] Provision Azure static hosting as code (ADR-0004).
+- [ ] Deploy `main` to Azure automatically after CI passes.
+- [ ] Publish a preview deployment for every pull request.
 - [ ] Run usability tests using actual odd-shaped rooms and real gear measurements.
 - [ ] Fix critical failures, confusing terms, and touch interaction issues.
 - [ ] Measure editor and generator performance on target devices.
@@ -107,7 +109,7 @@ Tracking: epic [#6](https://github.com/austinthedeveloper/kids-course/issues/6) 
 - [ ] Gate production releases: versioned, approved, smoke-tested, with a rehearsed rollback.
 - [ ] Harden hosting: security headers, caching, routing, domain.
 
-**Demo:** fresh install through saved course on phone/tablet. **Exit:** agreed beta quality gate reached; no critical safety defects.
+**Demo:** fresh install through saved course on phone/tablet, from the deployed site. **Exit:** agreed beta quality gate reached; no critical safety defects.
 
 ## Post-MVP milestones (not commitments)
 

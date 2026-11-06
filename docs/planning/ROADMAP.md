@@ -4,11 +4,11 @@
 
 | Stage | Outcome | Key dependency |
 | --- | --- | --- |
-| Foundations (M0) | Running app and domain contracts, deployed to Azure on every merge | Azure subscription (Q-11) |
+| Foundations (M0) | Running app and domain contracts | None |
 | Describe reality (M1–M2) | Inventory + irregular room editor | Geometry conventions |
 | Solve layout (M3) | Verified feasible course or reasons for failure | Reviewed templates + clearances |
 | Use it at home (M4) | Instructions, editing, locking, saved courses | Validated generation |
-| Beta/release (M5) | Reliable, accessible practical MVP | Household testing |
+| Beta/release (M5) | Reliable, accessible practical MVP, hosted on Azure | Household testing, Azure subscription (Q-11) |
 | Improve (M6+) | Less rearrangement, themes, intelligent assistance | User evidence |
 
 ## MVP / next / later
