@@ -1,0 +1,4 @@
+{
+  "description": "Exact phrases that may contain a prohibited term because they negate it. Every addition needs review against docs/product/SAFETY.md.",
+  "phrases": []
+}

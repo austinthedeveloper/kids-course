@@ -2,7 +2,7 @@
 
 Design safe, imaginative at-home movement courses using equipment you already own and the space you actually have.
 
-> **Status:** Planning / pre-implementation. This repository's documentation defines the proposed product, MVP, implementation order, and acceptance gates. Technology and scope decisions marked *proposed* may be revisited through ADRs.
+> **Status:** Early implementation (Milestone 0). The app shell and tooling exist; rooms cannot be drawn and courses cannot be generated yet. This repository's documentation defines the proposed product, MVP, implementation order, and acceptance gates. Technology and scope decisions marked *proposed* may be revisited through ADRs.
 
 ## The problem
 
@@ -50,7 +50,37 @@ Angular + TypeScript, Konva.js for canvas interactions, lightweight geometry uti
 
 ## Local development
 
-Not scaffolded yet. Start at [Milestone 0](docs/planning/MILESTONES.md). Once scaffolded, add exact Node/tool versions and the install, dev, test, build, and lint commands here.
+| Tool | Version |
+| --- | --- |
+| Node | 22 (see `.nvmrc`; `^22.22.3` or `^24.15.0`, enforced on install) |
+| npm | 10 or later (lockfile committed) |
+| Angular | 22.2 |
+
+```bash
+nvm use
+```
+
+```bash
+npm ci
+```
+
+```bash
+npx playwright install chromium
+```
+
+| Task | Command |
+| --- | --- |
+| Run the app at http://localhost:4200 | `npm start` |
+| Unit and property tests | `npm test` |
+| Unit tests in watch mode | `npm run test:watch` |
+| Unit tests with coverage | `npm run test:coverage` |
+| End-to-end tests | `npm run e2e` |
+| Lint, boundaries, skipped-test and copy-claims checks | `npm run lint` |
+| Format | `npm run format` |
+| Production build | `npm run build` |
+| Everything CI runs | `npm run check` |
+
+The app runs entirely locally; nothing is deployed yet. See [Deployment](docs/architecture/DEPLOYMENT.md) for the plan.
 
 ## Guiding principles
 
