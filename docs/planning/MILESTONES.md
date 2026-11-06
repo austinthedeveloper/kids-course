@@ -8,15 +8,15 @@ Tracking: epic [#1](https://github.com/austinthedeveloper/kids-course/issues/1) 
 
 **Goal:** reproducible local app and test setup; shared conventions.
 
-- [ ] Choose Angular version, package manager, Node version, and lockfile; record in README.
-- [ ] Scaffold Angular application with strict TypeScript, routing, and lint/format conventions.
-- [ ] Establish test runner and Playwright smoke test; run CI on pushes/PRs.
-- [ ] Create feature/module skeleton (domain, geometry, persistence, UI).
-- [ ] Define units, coordinates, polygon validity, IDs, and persisted schema version.
-- [ ] Implement responsive shell and accessibility baseline.
-- [ ] Add example fixtures: rectangular and L-shaped rooms, common gear.
+- [x] Choose Angular version, package manager, Node version, and lockfile; record in README.
+- [x] Scaffold Angular application with strict TypeScript, routing, and lint/format conventions.
+- [x] Establish test runner and Playwright smoke test; run CI on pushes/PRs.
+- [x] Create feature/module skeleton (domain, geometry, persistence, UI).
+- [x] Define units, coordinates, polygon validity, IDs, and persisted schema version.
+- [x] Implement responsive shell and accessibility baseline.
+- [x] Add example fixtures: rectangular and L-shaped rooms, common gear.
 - [ ] Decide canvas library after a quick drag/zoom/rotate prototype; record ADR update.
-- [ ] Agree unit test conventions and report coverage for core modules.
+- [x] Agree unit test conventions and report coverage for core modules.
 
 **Demo:** starts locally, CI green, sample room visible. **Exit:** clean setup, automated smoke test and domain type tests pass.
 
