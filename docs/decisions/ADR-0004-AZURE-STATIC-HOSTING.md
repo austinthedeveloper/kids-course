@@ -14,7 +14,7 @@ AGENTS.md requires an accepted ADR before any cloud dependency. This ADR is that
 - Host the built application as **static files on Azure**. Proposed service: **Azure Static Web Apps** (HTTPS by default, per-pull-request preview environments, no servers to run).
 - Define the hosting resources as **infrastructure-as-code** in this repository (Bicep proposed).
 - Build, test and deploy with **GitHub Actions** (proposed, since the repository and CI already live on GitHub).
-- Deliver in three steps: continuous deployment of `main` (M0), a preview per pull request (M1), and gated, versioned production releases with rollback (M5).
+- Develop and test locally through M4. In M5, deliver in three steps: continuous deployment of `main`, a preview per pull request, and gated, versioned production releases with rollback. The owner decided on 2026-11-06 to work locally first; hosting can be pulled forward at any time because the app has no dependency on it.
 - Never deploy a build whose tests failed or were skipped. Hazard fixtures are part of the deployment gate.
 
 ## What this does not change
@@ -26,7 +26,7 @@ AGENTS.md requires an accepted ADR before any cloud dependency. This ADR is that
 ## Consequences
 
 **Pros:** every merge is testable on real devices; previews make touch and layout review practical; hosting cost is expected to be small; infrastructure is reviewable and reproducible.  
-**Cons:** an Azure subscription and its secrets must be owned and maintained; the host sees standard web request logs (such as IP addresses), which the privacy notes must say; a cached or stale build is a new failure mode to guard against; plan limits (for example the number of preview environments) need checking against current Azure pricing.
+**Cons:** until M5, builds run only on a developer's machine, so real-device checks go over the local network; an Azure subscription and its secrets must be owned and maintained; the host sees standard web request logs (such as IP addresses), which the privacy notes must say; a cached or stale build is a new failure mode to guard against; plan limits (for example the number of preview environments) need checking against current Azure pricing.
 
 ## Revisit when
 
