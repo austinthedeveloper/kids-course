@@ -50,7 +50,7 @@ Tracking: epic [#3](https://github.com/austinthedeveloper/kids-course/issues/3) 
 - [ ] Add zoom, pan, fit-to-view, mobile touch controls and numeric inspector.
 - [ ] Save/load/rename/duplicate/delete room profiles.
 - [ ] Add unlimited-space mode with explicit feasibility limitation.
-- [ ] Create at least three saved irregular-room fixtures for testing.
+- [x] Create at least three saved irregular-room fixtures for testing.
 - [ ] Cover the room editor flows end to end.
 
 **Demo:** draw an L-shaped living room, add couch/table, reload. **Exit:** geometry and UI agree; no invalid polygon can be persisted.
