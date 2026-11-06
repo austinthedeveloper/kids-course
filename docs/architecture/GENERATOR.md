@@ -34,7 +34,8 @@ Generator output is a **candidate that passes software checks**, not a guarantee
 
 - Polygon containment must validate **the entire rotated clearance shape**, not just its center.
 - Inflate/offset footprints using reviewed clearance margins. For rotated equipment, transform corners before testing intersection.
-- Use robust epsilon handling and consistent boundary-touching policy: touching a wall or hazard with required clearance is a collision.
+- Use robust epsilon handling and consistent boundary-touching policy: touching a wall or hazard with required clearance is a collision. Implemented in `core/geometry`: a gap of `GEOMETRY_EPSILON_CM` (0.000001 cm) or less counts as touching, and unusable input such as NaN throws rather than reading as no collision. No geometry library is used.
+- Circles are checked as a 32-sided polygon that fully covers them, which can only overstate the space an item needs.
 - Obstacle segments and polygons must never be crossed by the route; station routes have practical width, not infinitely thin lines.
 - Separate station footprint and movement corridor; visually display both when troubleshooting.
 - Unlimited mode may choose a conceptual sequence, but must **not** claim spatial feasibility or assign authoritative distances.
