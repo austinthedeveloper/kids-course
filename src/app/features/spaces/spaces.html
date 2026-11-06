@@ -1,0 +1,61 @@
+<h1>Spaces</h1>
+<p>
+  <strong>Prototype.</strong> Tries out drawing on touch screens; changes are not saved. Rooms are
+  test samples with placeholder sizes.
+</p>
+
+<div class="controls">
+  <label class="field">
+    <span>Sample room</span>
+    <select [value]="roomId()" (change)="selectRoom($any($event.target).value)">
+      @for (room of rooms; track room.id) {
+        <option [value]="room.id">{{ room.name }}</option>
+      }
+    </select>
+  </label>
+  <label class="check">
+    <input type="checkbox" [checked]="snap()" (change)="snap.set($any($event.target).checked)" />
+    <span>Snap to 15 cm grid</span>
+  </label>
+  <div class="buttons" role="group" aria-label="View">
+    <button type="button" (click)="zoomBy(1.25)">Zoom in</button>
+    <button type="button" (click)="zoomBy(0.8)">Zoom out</button>
+    <button type="button" (click)="fit()">Fit room</button>
+  </div>
+</div>
+
+<div
+  #host
+  class="stage"
+  role="img"
+  [attr.aria-label]="'Top-down drawing of ' + room().name + '. The same details are listed below.'"
+  [attr.data-scale]="view().scale"
+  [attr.data-offset-x]="view().offsetX"
+  [attr.data-offset-y]="view().offsetY"
+></div>
+
+<p class="message" role="status" data-testid="edit-message">{{ message() }}</p>
+
+<h2>Room details</h2>
+<p data-testid="floor-area">Floor area: {{ floorArea() }}</p>
+
+<h3>Corners</h3>
+<ol data-testid="corners">
+  @for (corner of boundary().vertices; track $index) {
+    <li>{{ formatCm(corner.x) }} across, {{ formatCm(corner.y) }} down</li>
+  }
+</ol>
+
+<h3>Obstacles</h3>
+@if (room().obstacles.length > 0) {
+  <ul data-testid="obstacles">
+    @for (obstacle of room().obstacles; track obstacle.id) {
+      <li>{{ obstacle.label }} ({{ obstacle.type }})</li>
+    }
+  </ul>
+} @else {
+  <p>None marked.</p>
+}
+
+<h3>Sample mat</h3>
+<p data-testid="mat-rotation">Rotation: {{ matRotation() }}°</p>
