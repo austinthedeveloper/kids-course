@@ -67,7 +67,8 @@
           "options": {
             "coverageInclude": ["src/app/**/*.ts"],
             "coverageExclude": ["src/app/**/*.spec.ts", "src/app/core/fixtures/**"],
-            "coverageReporters": ["text", "text-summary", "html", "lcov"]
+            "coverageReporters": ["text", "text-summary", "html", "lcov"],
+            "runnerConfig": "vitest-base.config.mts"
           }
         },
         "lint": {

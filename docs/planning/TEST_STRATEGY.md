@@ -14,11 +14,19 @@
 
 Set up by EN-001 ([#11](https://github.com/austinthedeveloper/kids-course/issues/11)) and EN-036 ([#93](https://github.com/austinthedeveloper/kids-course/issues/93)).
 
-- One runner (Vitest or Jest, chosen in M0) for all unit and property tests; a property-based testing library for geometry and generator invariants.
+- **Vitest** (through Angular's unit-test builder) for all unit and property tests, and **fast-check** for geometry and generator invariants.
 - Tests sit next to the code they cover. Pure core modules (`domain`, `geometry`, `generator`, `safety`) are tested without Angular, a browser or IndexedDB; persistence is tested against the in-memory repository and, in integration tests, real IndexedDB.
 - Fixtures come from the shared fixtures module by name. Do not redefine a room or gear set inside a test.
 - Every story adds or updates unit tests for its logic and its error states. A bug fix starts with a failing test.
-- Coverage is reported in CI on every run, with core modules visible separately. Thresholds are set from a measured baseline and recorded here; none is assumed in advance.
+- Coverage is reported in CI on every run, with core modules visible separately. Floors are set from a measured baseline, enforced by `vitest-base.config.mts`, and raised over time; never lower one to get a change through.
+
+| Core modules (`domain`, `geometry`, `validation`) | Statements | Branches | Functions | Lines |
+| --- | --- | --- | --- | --- |
+| Floor | 95% | 90% | 100% | 95% |
+
+Floors apply to the group as a whole. Measured on 2026-11-05: every core file was at or above 93% statements, 91% branches, 100% functions and 97% lines per file. UI is covered by Playwright and has no unit coverage floor.
+
+Commands: `npm test` (once), `npm run test:watch`, `npm run test:coverage`, `npm run e2e`, and `npm run check` for everything CI runs.
 - Never commit `.skip` or `.only`. CI fails on them, so a safety test cannot be silently switched off.
 
 ## Playwright: tooling and conventions

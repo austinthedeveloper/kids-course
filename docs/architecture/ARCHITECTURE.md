@@ -27,6 +27,8 @@ src/app/
   core/
     domain/              # types, schemas, IDs, units
     geometry/            # polygons, transforms, clearances, routing
+    validation/          # room, obstacle, footprint and inventory validators
+    fixtures/            # named test and sample data
     generator/           # templates, placement, scoring
     persistence/         # IndexedDB, migrations, import/export
     safety/              # policy validation and review metadata
@@ -35,7 +37,7 @@ src/app/
     drawing/             # canvas/editor components
 ```
 
-This is an organizational sketch, not a requirement to create all directories immediately.
+This is an organizational sketch, not a requirement to create all directories immediately. ESLint enforces the boundaries in `eslint.config.mjs`: pure core modules cannot import Angular, RxJS, Konva, features or persistence, cannot use the DOM, storage or network, and cannot call `Math.random`. Inside core, dependencies run one way: `domain` → `geometry` → `validation`.
 
 ## Data flow
 
