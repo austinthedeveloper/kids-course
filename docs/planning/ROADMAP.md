@@ -4,7 +4,7 @@
 
 | Stage | Outcome | Key dependency |
 | --- | --- | --- |
-| Foundations (M0) | Running app and domain contracts | None |
+| Foundations (M0) | Running app and domain contracts, deployed to Azure on every merge | Azure subscription (Q-11) |
 | Describe reality (M1–M2) | Inventory + irregular room editor | Geometry conventions |
 | Solve layout (M3) | Verified feasible course or reasons for failure | Reviewed templates + clearances |
 | Use it at home (M4) | Instructions, editing, locking, saved courses | Validated generation |
@@ -31,6 +31,8 @@
 | Too many templates before safety review | Small approved catalog; versioned reviews |
 | AI cost or hallucinated instructions | No AI in MVP; optional themes only after deterministic validation |
 | Local data lost or browser storage cleared | Export/import, warn about local-only storage, consider later opt-in sync |
+| A deployment breaks saved data or serves a stale build | Migration tests gate releases; entry document not cached; version stamp; rehearsed rollback |
+| Hosting secrets leak or cost drifts | OIDC or environment secrets only, no secrets for fork PRs, cost alert, static-only resources |
 
 ## Decision triggers
 
@@ -41,6 +43,8 @@
 
 ## Product discovery experiments
 
+Tracked in EN-027 ([#73](https://github.com/austinthedeveloper/kids-course/issues/73)). Experiment 1 can run as soon as the room editor (M2) is demoable.
+
 1. Observe an adult trace a real irregular room without instructions.
 2. Measure the time from saved room to physical course setup.
 3. Ask whether generated course fits without moving furniture.
@@ -49,9 +53,11 @@
 
 ## Open questions register
 
-- [ ] Define initial list of actual household equipment, dimensions, and counts.
-- [ ] Select a conservative approved activity template set and obtain appropriate review.
-- [ ] Determine supported age bands and readiness prompts.
-- [ ] Confirm minimum route/circulation clearance policy.
-- [ ] Decide whether MVP must work entirely offline after first load.
-- [ ] Decide if print/export is required for first alpha or final MVP only.
+Each question is tracked as a `Q-xx` issue; answer it there, update the affected docs, then tick it here. Questions Q-07 to Q-10 (course flow, reading device, and two data-model gaps) are listed with the rest in [BACKLOG.md](BACKLOG.md#open-questions).
+
+- [ ] Define initial list of actual household equipment, dimensions, and counts. (Q-01, [#20](https://github.com/austinthedeveloper/kids-course/issues/20))
+- [ ] Select a conservative approved activity template set and obtain appropriate review. (Q-02, [#21](https://github.com/austinthedeveloper/kids-course/issues/21))
+- [ ] Determine supported age bands and readiness prompts. (Q-03, [#22](https://github.com/austinthedeveloper/kids-course/issues/22))
+- [ ] Confirm minimum route/circulation clearance policy. (Q-04, [#23](https://github.com/austinthedeveloper/kids-course/issues/23))
+- [ ] Decide whether MVP must work entirely offline after first load. (Q-05, [#19](https://github.com/austinthedeveloper/kids-course/issues/19))
+- [ ] Decide if print/export is required for first alpha or final MVP only. (Q-06, [#57](https://github.com/austinthedeveloper/kids-course/issues/57))

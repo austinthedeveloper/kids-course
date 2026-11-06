@@ -30,17 +30,23 @@ A mobile-friendly, top-down room editor and course generator. Parents save room 
 | [UX flows](docs/product/UX_FLOWS.md) | Screens, interactions, and error states |
 | [Safety policy](docs/product/SAFETY.md) | Hazard prevention and explicit limitations |
 | [Architecture](docs/architecture/ARCHITECTURE.md) | Technical direction and modules |
+| [Deployment](docs/architecture/DEPLOYMENT.md) | Azure hosting, pipelines, environments, release and rollback |
 | [Data model](docs/architecture/DATA_MODEL.md) | Entities, geometry, schemas, units |
 | [Generation design](docs/architecture/GENERATOR.md) | Deterministic layout algorithm and validation |
 | [Milestones](docs/planning/MILESTONES.md) | Ordered delivery checklist and exit gates |
-| [Backlog](docs/planning/BACKLOG.md) | User stories and priorities |
+| [Backlog](docs/planning/BACKLOG.md) | Story/enabler/open-question index with GitHub issue links and requirement traceability |
+| [GitHub workflow](docs/planning/GITHUB_WORKFLOW.md) | Labels, IDs, project board and how to pick up work |
 | [Testing](docs/planning/TEST_STRATEGY.md) | Test layers, fixtures, and release criteria |
 | [Roadmap](docs/planning/ROADMAP.md) | MVP vs later ideas; risks |
 | [ADRs](docs/decisions/) | Decisions and tradeoffs |
 
+## Project tracking
+
+Work is tracked in [GitHub issues](https://github.com/austinthedeveloper/kids-course/issues) grouped by [milestones](https://github.com/austinthedeveloper/kids-course/milestones) (M0–M5 are the MVP) and on the [project board](https://github.com/users/austinthedeveloper/projects/6). Each milestone has an epic issue; open product and safety decisions are `Q-xx` issues. The [wiki](https://github.com/austinthedeveloper/kids-course/wiki) is a reader-friendly overview; the docs in this repository are the source of truth.
+
 ## Proposed stack
 
-Angular + TypeScript, Konva.js for canvas interactions, lightweight geometry utilities, deterministic course generation, IndexedDB for local persistence, Vitest/Jest unit tests and Playwright end-to-end tests. **No AI backend is required for MVP.** Confirm library compatibility at project setup.
+Angular + TypeScript, Konva.js for canvas interactions, lightweight geometry utilities, deterministic course generation, IndexedDB for local persistence, Vitest/Jest unit tests and Playwright end-to-end tests. **No AI backend is required for MVP.** Confirm library compatibility at project setup. The built app is hosted as static files on Azure and deployed by GitHub Actions ([ADR-0004](docs/decisions/ADR-0004-AZURE-STATIC-HOSTING.md)); household data stays in the browser.
 
 ## Local development
 

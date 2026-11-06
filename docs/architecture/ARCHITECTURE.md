@@ -13,6 +13,7 @@ Local-first, responsive, testable, deterministic, modular, and safe by construct
 - **IndexedDB** (typed repository adapter) for local profiles/courses; localStorage only for tiny preferences.
 - **Unit/property tests + Playwright** for geometry, persistence and complete editor flows.
 - **No mandatory backend or AI** in MVP. Optional story/theme AI is behind an abstraction later.
+- **Static hosting on Azure** with GitHub Actions pipelines (ADR-0004). The deployed artifact is the built bundle only; see [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## Logical modules
 

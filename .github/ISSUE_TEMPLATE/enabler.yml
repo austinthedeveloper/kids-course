@@ -1,0 +1,40 @@
+name: Enabler
+description: Technical foundation, fixture, quality or review work (EN-xxx)
+title: "EN-000: "
+labels: ["type:enabler"]
+body:
+  - type: markdown
+    attributes:
+      value: Take the next free `EN-` number and add a row to `docs/planning/BACKLOG.md`.
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this is needed
+      description: Which stories or exit gates depend on it.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: Test cases / fixtures
+      description: Named fixtures added or used.
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      value: |
+        - Blocked by:
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: This touches a hard rule in SAFETY.md (add the `safety-critical` label)

@@ -1,0 +1,38 @@
+name: Bug
+description: Something is wrong, including layouts that break a safety rule
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety defect?
+      description: Safety defects are P0, get a named regression fixture and block release.
+      options:
+        - label: The app produced, displayed or failed to reject a layout that breaks a hard rule in SAFETY.md, or made a safety claim
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Include room mode and shape, obstacles, gear and course settings. For generated layouts, include the seed and generator version so it can be replayed.
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and browser
+  - type: markdown
+    attributes:
+      value: Do not include a child's name, birth date, photos or location.

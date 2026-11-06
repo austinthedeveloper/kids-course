@@ -1,0 +1,31 @@
+name: Open question
+description: A product or safety decision the owner needs to make (Q-xx)
+title: "Q-00: "
+labels: ["type:open-question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: What goes wrong, or what cannot be finished, without an answer.
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options
+      description: Known options. Mark any suggestion as a suggestion, not a decision.
+  - type: textarea
+    id: blocks
+    attributes:
+      label: Blocks
+      description: Issue IDs that cannot be marked done until this is answered.
+  - type: markdown
+    attributes:
+      value: To close, answer in a comment, update the affected docs (and add an ADR for technical decisions), then close.
