@@ -1,0 +1,32 @@
+<a class="skip-link" href="#main" (click)="skipToMain($event)">Skip to main content</a>
+
+<header class="site-header">
+  <a class="brand" routerLink="/">Kids Course Builder</a>
+  <nav aria-label="Main">
+    <ul class="nav-list">
+      @for (link of links; track link.path) {
+        <li>
+          <a
+            class="nav-link"
+            [routerLink]="link.path"
+            routerLinkActive="is-active"
+            ariaCurrentWhenActive="page"
+            [routerLinkActiveOptions]="{ exact: link.exact }"
+            >{{ link.label }}</a
+          >
+        </li>
+      }
+    </ul>
+  </nav>
+</header>
+
+<main id="main" #main class="site-main" tabindex="-1">
+  <router-outlet />
+</main>
+
+<footer class="site-footer">
+  <p>
+    Planning aid only, not a safety certification. An adult must inspect the space and equipment,
+    judge the child's readiness and supervise play throughout.
+  </p>
+</footer>

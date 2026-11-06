@@ -1,0 +1,11 @@
+# Docs are hand-formatted; do not reflow them.
+*.md
+docs/
+.github/ISSUE_TEMPLATE/
+package-lock.json
+dist/
+coverage/
+.angular/
+playwright-report/
+test-results/
+.claude/
