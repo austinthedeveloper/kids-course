@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Safety policy
+    url: https://github.com/austinthedeveloper/kids-course/blob/main/docs/product/SAFETY.md
+    about: Read this before proposing equipment, activities or clearance changes.
+  - name: Backlog index
+    url: https://github.com/austinthedeveloper/kids-course/blob/main/docs/planning/BACKLOG.md
+    about: Stable IDs, requirement traceability and open questions.

@@ -94,6 +94,14 @@ interface CourseSettings {
 - Clearance geometry is derived from template + specific equipment. Never store an unvalidated freeform clearance override.
 - Persist station poses and snapshots so editing equipment/catalog later does not silently alter saved courses.
 
+## Known gaps (undecided)
+
+- Footprint of a station that uses several items (station envelope): Q-09, [#24](https://github.com/austinthedeveloper/kids-course/issues/24).
+- Room entry/exit points, an inventory snapshot on `Course`, and a closed vocabulary for `goal`/`goalTags`: Q-10, [#25](https://github.com/austinthedeveloper/kids-course/issues/25).
+- Allowed `ageBand` values: Q-03, [#22](https://github.com/austinthedeveloper/kids-course/issues/22).
+
+Do not resolve these by assumption in code; record the decision here first.
+
 ## Evolution
 
 Add richer shapes, room zones, equipment condition flags, multiple poses per complex station, child readiness attributes (without identity), and import/export schemas after core fixtures demonstrate need. Never use unversioned arbitrary JSON as the main persistence contract.

@@ -32,6 +32,7 @@ Priority: **P0** required for MVP; **P1** first polish; **P2** future.
 - **Resilience:** validate persisted documents on load; handle corrupted/old versions without losing all data.
 - **Security:** treat imported/user-entered labels as untrusted; avoid HTML injection; restrict any future server APIs.
 - **Reliability:** never silently overlap equipment or route through walls/obstacles.
+- **Hosting and delivery:** served as static files from Azure (ADR-0004); no household data is sent to or stored on a server; no analytics or telemetry without an accepted ADR. Every deployment comes from an automated pipeline with all tests passing and none skipped. An update must not make previously saved rooms, inventory or courses unreadable.
 
 ## Safety acceptance gates
 

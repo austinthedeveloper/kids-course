@@ -49,10 +49,10 @@ The product is a **spatial planner**, not merely a list of exercise ideas: it un
 
 ## Open product questions
 
-- Which equipment does the initial household own, in what sizes and quantities?
-- What is the child's age/ability range to prioritize during usability tests?
-- Are setup instructions primarily read on a phone or shown on a larger screen?
-- Is course flow one-direction only at launch, or should loops be allowed?
-- Do we need a printer-friendly black-and-white mode at MVP?
+- Which equipment does the initial household own, in what sizes and quantities? (Q-01, [#20](https://github.com/austinthedeveloper/kids-course/issues/20))
+- What is the child's age/ability range to prioritize during usability tests? (Q-03, [#22](https://github.com/austinthedeveloper/kids-course/issues/22))
+- Are setup instructions primarily read on a phone or shown on a larger screen? (Q-08, [#58](https://github.com/austinthedeveloper/kids-course/issues/58))
+- Is course flow one-direction only at launch, or should loops be allowed? (Q-07, [#42](https://github.com/austinthedeveloper/kids-course/issues/42))
+- Do we need a printer-friendly black-and-white mode at MVP? (Q-06, [#57](https://github.com/austinthedeveloper/kids-course/issues/57))
 
-Capture answers as issues; do not block Milestone 0 on them.
+Answer each in its linked issue; do not block Milestone 0 on them.

@@ -1,0 +1,51 @@
+name: User story
+description: Observable value for a parent, caregiver or maintainer (US-xxx)
+title: "US-000: "
+labels: ["type:story"]
+body:
+  - type: markdown
+    attributes:
+      value: Take the next free `US-` number and add a row to `docs/planning/BACKLOG.md`. Add priority, area and milestone after creating.
+  - type: textarea
+    id: story
+    attributes:
+      label: User story
+      value: As a [role], I want [action], so that [benefit].
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Observable behaviour, including at least one error state.
+      value: |
+        - [ ] Observable behavior 1
+        - [ ] Observable behavior 2
+        - [ ] Error state covered
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: Test cases
+      value: |
+        - Normal input:
+        - Edge case:
+        - Accessibility/touch:
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Story IDs, open questions, requirements (R-xx) and ADRs.
+      value: |
+        - Blocked by:
+        - Requirements:
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: This touches a hard rule in SAFETY.md (add the `safety-critical` label and name the fixture that covers it)
+        - label: This needs content or safety approval from a person (add `needs-human-review`)

@@ -1,8 +1,10 @@
 # Milestones — ordered implementation checklist
 
-Use checkboxes as living project progress. Each milestone has a **demo** and an **exit gate**. Do not start sophisticated AI or search optimizers before foundational geometry works.
+Each milestone is tracked on GitHub by an epic whose sub-issues are the stories in [BACKLOG.md](BACKLOG.md); see [GITHUB_WORKFLOW.md](GITHUB_WORKFLOW.md). Use checkboxes as living project progress. Each milestone has a **demo** and an **exit gate**. Do not start sophisticated AI or search optimizers before foundational geometry works.
 
 ## M0 — Repository and architecture foundation
+
+Tracking: epic [#1](https://github.com/austinthedeveloper/kids-course/issues/1) · [GitHub milestone](https://github.com/austinthedeveloper/kids-course/milestone/1)
 
 **Goal:** reproducible local app and test setup; shared conventions.
 
@@ -14,10 +16,15 @@ Use checkboxes as living project progress. Each milestone has a **demo** and an 
 - [ ] Implement responsive shell and accessibility baseline.
 - [ ] Add example fixtures: rectangular and L-shaped rooms, common gear.
 - [ ] Decide canvas library after a quick drag/zoom/rotate prototype; record ADR update.
+- [ ] Agree unit test conventions and report coverage for core modules.
+- [ ] Provision Azure static hosting as code (ADR-0004).
+- [ ] Deploy `main` to Azure automatically after CI passes.
 
-**Demo:** starts locally, CI green, sample room visible. **Exit:** clean setup, automated smoke test and domain type tests pass.
+**Demo:** starts locally, CI green, sample room visible at the deployed Azure URL. **Exit:** clean setup, automated smoke test and domain type tests pass.
 
 ## M1 — Equipment inventory + approved activity catalog
+
+Tracking: epic [#2](https://github.com/austinthedeveloper/kids-course/issues/2) · [GitHub milestone](https://github.com/austinthedeveloper/kids-course/milestone/2)
 
 **Goal:** parents can accurately describe what they own.
 
@@ -28,10 +35,14 @@ Use checkboxes as living project progress. Each milestone has a **demo** and an 
 - [ ] Define approved activity templates and adult-facing instructions.
 - [ ] Persist inventory locally; test save/load and invalid data.
 - [ ] Add clear empty/error states.
+- [ ] Set up the Playwright harness (phone and tablet/desktop) and cover the inventory flows end to end.
+- [ ] Publish a preview deployment for every pull request.
 
 **Demo:** configure a realistic household inventory and reload unchanged. **Exit:** no unspecified dimension silently becomes zero; only approved activities can be selected.
 
 ## M2 — Top-down room editor
+
+Tracking: epic [#3](https://github.com/austinthedeveloper/kids-course/issues/3) · [GitHub milestone](https://github.com/austinthedeveloper/kids-course/milestone/3)
 
 **Goal:** make awkward rooms representable without CAD complexity.
 
@@ -43,10 +54,13 @@ Use checkboxes as living project progress. Each milestone has a **demo** and an 
 - [ ] Save/load/rename/duplicate/delete room profiles.
 - [ ] Add unlimited-space mode with explicit feasibility limitation.
 - [ ] Create at least three saved irregular-room fixtures for testing.
+- [ ] Cover the room editor flows end to end.
 
 **Demo:** draw an L-shaped living room, add couch/table, reload. **Exit:** geometry and UI agree; no invalid polygon can be persisted.
 
 ## M3 — Feasible generator v1
+
+Tracking: epic [#4](https://github.com/austinthedeveloper/kids-course/issues/4) · [GitHub milestone](https://github.com/austinthedeveloper/kids-course/milestone/4)
 
 **Goal:** produce a correct, modest course without AI.
 
@@ -59,10 +73,13 @@ Use checkboxes as living project progress. Each milestone has a **demo** and an 
 - [ ] Score feasible candidates for goal match and variety.
 - [ ] Return honest no-solution results and alternatives.
 - [ ] Add unit and property-based regression fixtures.
+- [ ] Cover generation and no-solution results end to end.
 
 **Demo:** generate and reject appropriate layouts in rectangular/L-shaped spaces. **Exit:** all critical geometry/safety fixtures pass; no knowingly invalid layout is returned.
 
 ## M4 — Course review, play, persistence
+
+Tracking: epic [#5](https://github.com/austinthedeveloper/kids-course/issues/5) · [GitHub milestone](https://github.com/austinthedeveloper/kids-course/milestone/5)
 
 **Goal:** make generated plans usable in a real home.
 
@@ -79,17 +96,21 @@ Use checkboxes as living project progress. Each milestone has a **demo** and an 
 
 ## M5 — MVP stabilization and release
 
+Tracking: epic [#6](https://github.com/austinthedeveloper/kids-course/issues/6) · [GitHub milestone](https://github.com/austinthedeveloper/kids-course/milestone/6)
+
 - [ ] Run usability tests using actual odd-shaped rooms and real gear measurements.
 - [ ] Fix critical failures, confusing terms, and touch interaction issues.
 - [ ] Measure editor and generator performance on target devices.
 - [ ] Test persisted-data migration, malformed imports, and version mismatch.
 - [ ] Review accessibility and instructions; verify all claims and warnings.
 - [ ] Record known limitations, changelog, and release checklist.
+- [ ] Gate production releases: versioned, approved, smoke-tested, with a rehearsed rollback.
+- [ ] Harden hosting: security headers, caching, routing, domain.
 
 **Demo:** fresh install through saved course on phone/tablet. **Exit:** agreed beta quality gate reached; no critical safety defects.
 
 ## Post-MVP milestones (not commitments)
 
-- **M6:** smarter no-rearrangement regeneration, room zones and alternative courses.
-- **M7:** thematic story cards, multiple child profiles without personal identifiers, richer equipment catalog.
-- **M8:** optional AI themes and photo-assisted room drafting (always manually validated).
+- **M6:** smarter no-rearrangement regeneration, room zones and alternative courses. Epic [#7](https://github.com/austinthedeveloper/kids-course/issues/7).
+- **M7:** thematic story cards, multiple child profiles without personal identifiers, richer equipment catalog. Epic [#8](https://github.com/austinthedeveloper/kids-course/issues/8).
+- **M8:** optional AI themes and photo-assisted room drafting (always manually validated). Epic [#9](https://github.com/austinthedeveloper/kids-course/issues/9).
